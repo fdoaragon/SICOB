@@ -20,3 +20,6 @@ DAL_SICOB/obj/Debug/TempPE/SicobDataSet.Designer.cs.dll
 CasaCambio/bin/Debug
 CasaCambio/obj
 CasaCambio/publish
+LlenarDocumentos/bin
+LlenarDocumentos/obj
+SetupSIBOB/Debug
