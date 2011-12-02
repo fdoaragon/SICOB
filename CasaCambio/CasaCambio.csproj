@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23F10C01-4D69-4086-8362-1F430D0FEB06}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CasaCambio</RootNamespace>
+    <AssemblyName>CasaCambio</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>CasaCambio.Program</StartupObject>
+    <ApplicationIcon>logo2_128.ico</ApplicationIcon>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <SignManifests>true</SignManifests>
+    <ManifestCertificateThumbprint>C1F1E6ADE0D2A00C38D458E25F503C149FEC4059</ManifestCertificateThumbprint>
+    <ManifestKeyFile>CasaCambio_TemporaryKey.pfx</ManifestKeyFile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://softarg.abarcatech.net/Aplicaciones/CasaCambio/</InstallUrl>
+    <UpdateUrl>http://softarg.abarcatech.net/Aplicaciones/CasaCambio/</UpdateUrl>
+    <TargetCulture>es-MX</TargetCulture>
+    <ProductName>CasaCambio</ProductName>
+    <PublisherName>SoftArg</PublisherName>
+    <SuiteName>Servicios de cambio</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>index.html</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=11.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=11.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=11.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="SoporteComun, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ConsolaWeb\SoporteComun\bin\Debug\SoporteComun.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmCambio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCambio.Designer.cs">
+      <DependentUpon>frmCambio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheques.Designer.cs">
+      <DependentUpon>frmCheques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCortesCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCortesCaja.Designer.cs">
+      <DependentUpon>frmCortesCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDiasFestivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiasFestivos.Designer.cs">
+      <DependentUpon>frmDiasFestivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventarios.Designer.cs">
+      <DependentUpon>frmInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrestamos.Designer.cs">
+      <DependentUpon>frmPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrestamosVencidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrestamosVencidos.Designer.cs">
+      <DependentUpon>frmPrestamosVencidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporte.Designer.cs">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSucursales.Designer.cs">
+      <DependentUpon>frmSucursales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTiposCambio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTiposCambio.Designer.cs">
+      <DependentUpon>frmTiposCambio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globales.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCambio.resx">
+      <DependentUpon>frmCambio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheques.resx">
+      <DependentUpon>frmCheques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCortesCaja.resx">
+      <DependentUpon>frmCortesCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDiasFestivos.resx">
+      <DependentUpon>frmDiasFestivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventarios.resx">
+      <DependentUpon>frmInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrestamos.resx">
+      <DependentUpon>frmPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrestamosVencidos.resx">
+      <DependentUpon>frmPrestamosVencidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporte.resx">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSucursales.resx">
+      <DependentUpon>frmSucursales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTiposCambio.resx">
+      <DependentUpon>frmTiposCambio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Reportes\Inventarios.rpt">
+      <LastGenOutput>Inventarios.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\Logotipos\logo1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\Logotipos\logo2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\Ticket3.rpt">
+      <LastGenOutput>Ticket3.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo2_128.ico" />
+    <Content Include="Reportes\Historial.rpt">
+      <LastGenOutput>Historial.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\Ticket2.rpt">
+      <LastGenOutput>Ticket2.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\Ticket.rpt">
+      <LastGenOutput>Ticket.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\CorteCaja.rpt">
+      <LastGenOutput>CorteCaja.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Gastos1-100.png" />
+    <None Include="Resources\cancel_24.png" />
+    <None Include="Resources\save_24.png" />
+    <None Include="Resources\cancel_16.png" />
+    <None Include="Resources\save_16.png" />
+    <None Include="Resources\Gastos-100.png" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL_SICOB\BLL_SICOB.csproj">
+      <Project>{9EEDA52E-13AA-4448-A2D6-F75BBAE145A7}</Project>
+      <Name>BLL_SICOB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL_SICOB\DAL_SICOB.csproj">
+      <Project>{711D8640-7C43-4168-B80C-6929C1AE8280}</Project>
+      <Name>DAL_SICOB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LlenarDocumentos\LlenarDocumentos.csproj">
+      <Project>{04C9D41F-DFDC-4EE6-97E9-04E357E90AA4}</Project>
+      <Name>LlenarDocumentos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cheque-150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar-150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pesos-150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pesos-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cheque-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documentos de Prestamos\plantillas.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\pagare.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\compraventavehiculo.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\reconocimientoadeudo.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="CasaCambio_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Resources\prestamos-100.png" />
+    <None Include="Resources\apply.png" />
+    <None Include="Resources\print_24.png" />
+    <None Include="Resources\View.png" />
+    <None Include="Resources\print_241.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\exec.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\search.png" />
+    <Content Include="silver.skf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="BusinessObjects.CrystalReports.10.5">
+      <Visible>False</Visible>
+      <ProductName>Crystal Reports Basic for Visual Studio 2008 %28x86, x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.Office.Interop.Word">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Vbe.Interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="office">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

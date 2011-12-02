@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CasaCambio.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Caja" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="Skin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">silver.skf</Value>
+    </Setting>
+    <Setting Name="Impresora" Type="System.String" Scope="User">
+      <Value Profile="(Default)">BIXOLON SRP-350</Value>
+    </Setting>
+    <Setting Name="NoCopias" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="TicketPantalla" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Uusario" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin</Value>
+    </Setting>
+    <Setting Name="CadenaConexion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">KXhr/W1NBrA7CdLmp7NHsVVc/5tGX3lIqQkjfGT+tx29fUOrP7wCC6jxB9JR/LHyvkl5XvigHXOAecv9BR/ov+MrWTCBPIhZ4Bf/7nQmDhR0gS9Tud7kYfO4PC0Yv05z8eRBjGsJu2PKbM6E4Deky+Bx3MqmoKoc89x2CTdskhA=</Value>
+    </Setting>
+    <Setting Name="Sistema" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">oJqpeewTJkc2eAzOl9fd/Q==</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
